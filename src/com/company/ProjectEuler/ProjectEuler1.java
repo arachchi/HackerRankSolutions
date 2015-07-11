@@ -1,8 +1,8 @@
-package com.company;
+package com.company.ProjectEuler;
 
 import java.util.Scanner;
 
-public class Main {
+public class ProjectEuler1 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

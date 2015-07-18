@@ -18,10 +18,10 @@ public class Node<T> {
 
 
     public void setEdges(Node<T> child) {
-        if(getEdges().contains(child)){
-            getEdges().remove(child);
+        if(!getEdges().contains(child)){
+            getEdges().add(child);
         }
-        getEdges().add(child);
+
     }
 
     public ArrayList<Node<T>> getEdges() {

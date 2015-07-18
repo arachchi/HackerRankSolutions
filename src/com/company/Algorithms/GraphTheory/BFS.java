@@ -74,8 +74,7 @@ public class BFS {
                 p = queue.dequeue();
 
                 visit(p);
-                ArrayList<Node<Integer>> tmp = p.getEdges();
-                for(Node<Integer> i:tmp){
+                for(Node<Integer> i:p.getEdges()){
                     if(!i.isVisited())
                         queue.enqueue(i);
                 }
@@ -103,6 +102,7 @@ public class BFS {
     }
 
     public static void setRelation(Node<Integer> vertex1,Node<Integer> vertex2 ){
+
         vertex1.setEdges(vertex2);
         vertex2.setEdges(vertex1);
     }

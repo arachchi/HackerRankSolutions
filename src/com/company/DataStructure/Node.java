@@ -18,6 +18,9 @@ public class Node<T> {
 
 
     public void setEdges(Node<T> child) {
+        if(getEdges().contains(child)){
+            getEdges().remove(child);
+        }
         getEdges().add(child);
     }
 

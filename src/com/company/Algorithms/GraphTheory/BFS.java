@@ -21,8 +21,7 @@ public class BFS {
 
             int N   = scanner.nextInt();
             int M   = scanner.nextInt();
-            if(i==2)
-                System.out.println("I'm here for " + i +"and N , M is: "+N +"    "+ M);
+
             Node<Integer>[] list = new Node[N];
             for(int k=0;k<N;k++){
                 list[k] = new Node<Integer>();
@@ -30,16 +29,14 @@ public class BFS {
                 list[k].setLevel(-1);
                 list[k].setName(" Node " + (k+1));
             }
-            if(i==2)
-                System.out.println("All the nodes created");
+
             for (int k=0;k<M;k++){
                 int x  = scanner.nextInt();
                 int y   = scanner.nextInt();
 
                 setRelation(list[x-1],list[y-1]);
             }
-            if(i==2)
-                System.out.println("Relations Created");
+
             int rootVal = scanner.nextInt();
 
             root = list[rootVal-1];
@@ -49,8 +46,6 @@ public class BFS {
             }catch (Exception e){
                 System.out.println();
             }
-            if(i==2)
-                System.out.println("Search Completed.");
 
             for(int k=0;k<N;k++){
                 if(k != rootVal-1) {
